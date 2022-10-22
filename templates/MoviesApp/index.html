@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <p>I am the index</p> 
+    <h2> Welcome to my plex library</h2>  
+    <div class="container">
+        {% comment %} These buttons are not working for me {% endcomment %}
+        {% comment %} <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'show_info' %}"> Show Info </a> {% endcomment %}
+        {% comment %} <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'show_movie' %}">Show Movie</a> {% endcomment %}
+        {% comment %} <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'displayPageView' %}">Display Movies</a> {% endcomment %}
+
+        <a class="btn btn-primary" href="{% url 'display' %} "> Display Movies </a>
+        <br>
+        <a class="btn btn-primary" href="{% url 'show_info' title='galaxy quest' year='1999' %} "> Show Info</a>
+        <br>
+        <a class="btn btn-primary" href="{% url 'show_movie' title='galaxy quest' %} "> Show Movie </a>
+       
+    </div>
+
+{% endblock %}

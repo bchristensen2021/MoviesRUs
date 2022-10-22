@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <p>I am the display</p>   
+
+    <div class="container">
+        {% for movie in data %}
+        <p>
+            {{ movie.title }} -
+            {{ movie.year }} - 
+            {{ movie.rating.description }} - 
+            {{ movie.category.description }} - 
+        </p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
